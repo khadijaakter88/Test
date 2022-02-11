@@ -1,0 +1,26 @@
+.navbar{
+    padding:0 !important ;
+}
+.carousel-inner{
+    width: 100%;
+    max-height: 500px !important;
+}
+.carousel-caption{
+    top: 30% !important;
+}
+.heading-1{
+    color: blueviolet;
+}
+.heading-2{
+    color: coral;
+}
+.heading-3{
+    color: chartreuse;
+}
+.custom-class p{
+    text-align: justify;
+}
+.custom-background{
+    background-color: rgb(163, 106, 68);
+    color: cornsilk;
+}
