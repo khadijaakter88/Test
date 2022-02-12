@@ -14,6 +14,105 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+   
+        <style>
+            .main{
+                background-color: #2782e3;
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                background-color: #eee;
+                min-height: 100px;
+                width: 520px;
+                margin: 100px auto;
+                border-radius: 5px;
+                height: auto;
+            }
+            .base{
+                width: 100%;
+                margin: 0;
+                overflow: hidden;
+                display: block;
+                float: none;
+            }
+            .base h4{
+                font-size: 26px;
+                text-align: center;
+                font-family: sans-serif;
+                margin-top: 0px;
+                box-shadow: 0px 2px #bababa;
+                font-weight: normal;
+                color: navy;
+                background: white;
+                padding: 5px;
+            }
+            .block{
+                width: 135px;
+                padding: 5px 20px;
+                margin-left: 20px;
+                display: inline-block;
+                float: left;
+            }
+            .title{
+                font-size: 20px;
+                text-align: left;
+                font-family: sans-serif;
+                font-weight: normal;
+                letter-spacing: 0.5px;
+                color: #1073d0;
+                word-spacing: 2.7px;
+            }
+            input[type=text]{
+                width: 140;
+                margin: auto;
+                outline: none;
+                min-height: 50px;
+                border: 2px solid #1073d0;
+                border-radius: 2px;
+                color: #1073d0;
+                font-size: 17px;
+                padding: 12px;
+            }
+            input[type=text]:focus{
+                background: #ffffff;
+                border: 2px solid  orange;
+            }
+            input[type=button]{
+                width: 150px;
+                margin-left: 35%;
+                margin-top: 40px;
+                outline: none;
+                border: none;
+                border-radius: 2px;
+                background-color: #0761b6;
+                padding: 14px 16px;
+                color: white;
+                font-size: 17px;
+            }
+            input[type=button]:hover{
+                background-color: #003669;
+            }
+            .age{
+                display: block;
+                margin: 10px;
+                margin-top: 35px;
+                padding-bottom: 20px;
+                overflow: hidden;
+                font-family: sans-serif;
+                font-size: 13px;
+                font-weight: normal;
+                line-height: 1.5;
+                word-spacing: 2.7px;
+                color: navy;
+                padding: 10px;
+
+            }
+
+        </style>
+   
     </head>
     <body>
        <header>
@@ -35,7 +134,7 @@
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="service.html">Services</a>
+                        <a class="nav-link" href="depertment.html">Depertments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="team.html">Teachers</a>
@@ -58,26 +157,70 @@
         </nav>
        </header>
 
-       <div class="container mt-5">
+      <div class="main">
+        <div class="container">
+            <div>
+                <div class="base">
+                    <h4>Age Calculator</h4>
+               
 
-        <input type="text" class="form-control datefield" placeholder="your date of birth">
-  
-        <center><button id="result" class="btn btn-primary mt-3 mb-3">Calculate</button></center>
-        
-          <h2 class="yourAge"></h2>
-        
+                    <div class="block">
+                        <p class="title">Day</p>
+                        <input type="text" name="day" id="day" placeholder="dd" minlength="1" maxlength="2" required>  
+                    </div>
+
+                    <div class="block">
+                        <p class="title">Month</p>
+                        <input type="text" name="month" id="month" placeholder="mm" minlength="1" maxlength="2" required>  
+                    </div>
+
+                    <div class="block">
+                        <p class="title">Year</p>
+                        <input type="text" name="year" id="year" placeholder="yyyy" minlength="4" maxlength="4" required>  
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="base">
+            <input type="button" name="submit" value="submit" onclick="age()"/>
+        </div>
+
+        <div class="age" id="age"></div>
+
       </div>
-
-      <script>
-          $('.datefield').datepicker({
-        orientation: 'bottom',
-        autoclose: true,
-        format: 'dd/mm/yyyy',
-        todayHighlight: true,
-        clearBtn:true,
-      });
-      </script>
        
+      <script type="text/javascript">
+          function age() {
+              var d1 =document.getElementById('day').value;
+              var m1 =document.getElementById('month').value;
+              var y1 =document.getElementById('year').value;
+
+              var date = new Date();
+              var d2 = date.getDate();
+              var m2 = 1+ date.getMonth();
+              var y2 = date.getFullYear();
+              var month = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+              if(d1> d2){
+                  d2 = d2 + month[m2 - 1];
+                  m2 = m2 - 1;
+              }
+
+              if(m1> m2){
+                  m2 = m2 + year[y2 - 1];
+                  y2 = y2 - 1;
+              }
+
+              var d = d2 - d1;
+              var m = m2 - m1;
+              var y = y2 - y1;
+
+              document.getElementById('age').innerHTML = 'Your Age Is' +y+ 'Years' +m+ 'Months' +d+ 'Days';
+
+          }
+      </script>
        
     </body>
 </html>

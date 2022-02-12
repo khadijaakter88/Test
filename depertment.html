@@ -13,6 +13,34 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+        <style>
+            .heading{
+                margin-top: 20px;
+                text-align: center;
+            }
+            .paragraph{
+                margin-top: 25px;
+                text-align: justify;
+            }
+            .row{
+                max-width: 1200px;
+                margin: auto;
+                background: #f2f2f2;
+                overflow: auto;
+            }
+            .card{
+                margin: 5px;
+                border: 1px solid #f2f2f2;
+                float: left;
+                width: 390px;
+            }
+            .card{
+                width: 100%;
+                height: auto;
+            }
+            
+            
+        </style>
 
     </head>
     <body>
@@ -35,10 +63,10 @@
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="depertment.html">Depertments</a>
+                        <a class="nav-link active" href="depertment.html">Depertments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="team.html">Teachers</a>
+                        <a class="nav-link" href="team.html">Teachers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -55,53 +83,38 @@
         </nav>
        </header>
 
-
-       <section id="teachers">
-            <div class="container my-3 py-5 text-center">
-                <div class="row mb-5">
-                    <div class="col">
-                        <h1>Our teachers</h1>
-                        <p class="mt-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ullam, blanditiis, natus beatae non at magni id perferendis quas ad officia iusto dolorem, ipsa veniam repudiandae. Harum quas vero enim.
-                        </p>
-                    </div>
-                </div>
+       <main>
+           <div class="container-fluid">
+                <div class="heading"><h1>Depertments</h1></div>
+                <div class="paragraph"><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora earum rem! Ab placeat quas similique iusto ut impedit consectetur vero possimus, nulla esse consequatur hic magni praesentium labore officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequuntur totam optio tempore laudantium ipsa ducimus quas vero provident ipsam itaque aliquam libero iusto porro! Fugiat ducimus neque nemo quo.</p></div>
 
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-md-3">
                         <div class="card">
                             <div class="card-body">
-                                <img src="" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                                <h3>name</h3>
-                                <h5>Lead writer</h5>
-                                <p>Labore delectus quis, hic iusto doloremque ea molestias atque nulla quaerat facere.</p>
-                                <div class="d-flex flex-row justify-content-center">
-                                    <div class="p-4">
-                                        <a href="#">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </div>
-                                    <div class="p-4">
-                                        <a href="#">
-                                            <i class="fa fa-twiter"></i>
-                                        </a>
-                                    </div>
-                                    <div class="p-4">
-                                        <a href="#">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                                <img src="./images/d2.jpg" alt="computer">
+                                <h1>Computer</h1>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./images/d1.jpg" alt="pathology">
+                                <h1>Pathology</h1>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./images/d3.jpg" alt="civil">
+                                <h1>Civil</h1>
                             </div>
                         </div>
                     </div>
                 </div>
                 
 
-            </div>
-       </section>
-
-
+           </div>
+       </main>
+    
         <script src="" async defer></script>
     </body>
 </html>
